@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-/* body{
-    background-image: url("https://github.com/ChandanaVaidya17/Sweet-Pills/blob/shrii/mind/myproject/myapp/static/images/jailam-rashad-Qe58SmRMcH4-unsplash.jpg");
-} */
 header {
     display: flex;
     justify-content: space-between;
@@ -16,10 +13,7 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-body{
-    background-image: url("https://github.com/ChandanaVaidya17/Sweet-Pills/blob/shrii/mind/myproject/myapp/static/images/jailam-rashad-Qe58SmRMcH4-unsplash.jpg");
 
-}
 
 .header-div {
     align-items: end;
