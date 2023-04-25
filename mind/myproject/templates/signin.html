@@ -1,37 +1,21 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    {% comment %} <link rel="stylesheet" href="{% static '/css/signIn.css' %}" /> {% endcomment %}
+    {% comment %}
+    <link rel="stylesheet" href="{% static '/css/signIn.css' %}" />
+    {% endcomment %}
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
       integrity="sha384-HzLeBuhoNPvSl5KYsCYJqxZ9gWyTazlF+gOm1L+6mKoysO+oIgeL2m+U26uwJ9O9"
       crossorigin="anonymous"
     />
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static '/css/signIn.css' %}">
 
-    <script src="{% static '/js/signIn.js' %}"></script>
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/signIn.css' %}"
+    />
   </head>
   <body>
-    <!-- <header>
-    <div class="logo">
-      <img src="logo.png" alt="Logo">
-    </div>
-    <nav class="navigation">
-      <ul>
-        <li><a href="#">Take Test</a></li>
-        <li><a href="#">About Us</a></li>
-      </ul>
-    </nav>
-  </header> -->
     <main>
-      <!-- <h1>Login</h1> -->
       <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -41,7 +25,7 @@
 
       <div class="container" id="container">
         <div class="form-container sign-up-container">
-          <form action="#">
+          <form action="" method="POST">
             <h1>Create Account</h1>
             <div class="social-container">
               <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -58,7 +42,7 @@
           </form>
         </div>
         <div class="form-container sign-in-container">
-          <form action="#">
+          <form action="" method="POST">
             <h1>Sign in</h1>
             <div class="social-container">
               <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -86,62 +70,19 @@
             <div class="overlay-panel overlay-right">
               <h1>Hello, Friend!</h1>
               <p>Enter your personal details and start journey with us</p>
-              <button class="ghost" id="signUp" onclick="location.href='../signup'">Sign Up</button>
+              <button
+                class="ghost"
+                id="signUp"
+                onclick="location.href='../signup'"
+              >
+                Sign Up
+              </button>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- <div class="footer">
-        <b> Follow me on </b>
-        <div class="icons">
-          <a href="https://github.com/kvaibhav01" target="_blank" class="social"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/vaibhavkhulbe143/"
-            target="_blank"
-            class="social"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            href="https://medium.com/@vaibhavkhulbe"
-            target="_blank"
-            class="social"
-            ><i class="fab fa-medium"></i
-          ></a>
-          <a
-            href="https://twitter.com/vaibhav_khulbe"
-            target="_blank"
-            class="social"
-            ><i class="fab fa-twitter-square"></i
-          ></a>
-          <a
-            href="https://linkedin.com/in/vaibhav-khulbe/"
-            target="_blank"
-            class="social"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </div> -->
-      </div>
     </main>
-    <!-- <footer>
-    <div class="social-media">
-      <ul>
-        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-      </ul>
-    </div>
-    <div class="footer-links">
-      <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
-  </footer> -->
-    {% comment %} <script src="{% static '/js/signIn.js' %}"></script> {% endcomment %}
-
   </body>
+  {%load static%}
+  <script src="{% static 'js/signIn.js' %}"></script>
 </html>
