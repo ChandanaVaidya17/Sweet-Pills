@@ -1,21 +1,28 @@
-    {% comment %}
-    <link rel="stylesheet" href="{% static '/css/signIn.css' %}" />
-    {% endcomment %}
+{% comment %}
+<link rel="stylesheet" href="{% static '/css/signIn.css' %}" />
+{% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
       integrity="sha384-HzLeBuhoNPvSl5KYsCYJqxZ9gWyTazlF+gOm1L+6mKoysO+oIgeL2m+U26uwJ9O9"
       crossorigin="anonymous"
     />
-{% comment %} 
+    {%load static%}
     <link
       rel="stylesheet"
       type="text/css"
       href="{% static 'css/signIn.css' %}"
-    /> {% endcomment %}
-
-    <link>
-
+    />
   </head>
   <body>
     <main>
