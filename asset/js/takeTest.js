@@ -182,7 +182,7 @@ submitBtn.addEventListener("click", () => {
         url: '/my-api-endpoint/',
         method: 'POST',
         data: {
-          'my_array': JSON.stringify()
+          'my_array': JSON.stringify(answerArry)
         },
         success: function(response) {
           console.log(response);
