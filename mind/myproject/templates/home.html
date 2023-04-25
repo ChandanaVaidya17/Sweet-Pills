@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
   <head>
+        {% load static %}
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website</title>
-    {% comment %}
-    <link rel="stylesheet" href="{% static '/css/index.css'}" />
-    {% endcomment %} {% load static %}
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static '/css/index.css' %}"
+      href="{% static 'css/index.css' %}"
     />
-
-    <script src="{% static '/js/index.js' %}"></script>
+    
   </head>
   <body>
     {% csrf_token %}
@@ -37,60 +34,8 @@
         </div>
       </div>
     </header>
-    <main>
-      <section class="section1">
-        <h1>Section 1</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          fringilla, sapien sit amet aliquam ullamcorper, quam lacus accumsan
-          nisl, nec tristique tellus nibh vitae sapien.
-        </p>
-        <img src="image1.jpg" alt="Image 1" />
-      </section>
-      <section class="section2">
-        <h1>Section 2</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          fringilla, sapien sit amet aliquam ullamcorper, quam lacus accumsan
-          nisl, nec tristique tellus nibh vitae sapien.
-        </p>
-        <img src="image2.jpg" alt="Image 2" />
-      </section>
-      <section class="section3">
-        <h1>Section 3</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          fringilla, sapien sit amet aliquam ullamcorper, quam lacus accumsan
-          nisl, nec tristique tellus nibh vitae sapien.
-        </p>
-        <img src="image3.jpg" alt="Image 3" />
-      </section>
-      <section class="section4">
-        <h1>Section 4</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          fringilla, sapien sit amet aliquam ullamcorper, quam lacus accumsan
-          nisl, nec tristique tellus nibh vitae sapien.
-        </p>
-        <img src="image4.jpg" alt="Image 4" />
-      </section>
-    </main>
-    <footer>
-      <div class="social-media">
-        <ul>
-          <li>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </li>
-        </ul>
-      </div>
-      <div class="copyright">&copy; 2023 My Website. All rights reserved.</div>
-    </footer>
-    <script></script>
+  
   </body>
+      {% load static %}
+    <script src="{% static 'js/index.js' %}"></script>
 </html>
