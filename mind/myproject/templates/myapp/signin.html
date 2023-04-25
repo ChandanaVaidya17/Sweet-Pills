@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="../css/signIn.css" />
+    {% comment %} <link rel="stylesheet" href="../css/signIn.css" /> {% endcomment %}
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
       integrity="sha384-HzLeBuhoNPvSl5KYsCYJqxZ9gWyTazlF+gOm1L+6mKoysO+oIgeL2m+U26uwJ9O9"
       crossorigin="anonymous"
     />
+    {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'my_app/css/signin.css' %}">
 
     <script src="{% static 'my_app/js/signIn.js' %}"></script>
@@ -143,4 +144,3 @@
 
   </body>
 </html>
-
