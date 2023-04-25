@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme 1</title>
+    <link
+      rel="shortcut icon"
+      href="../images/smvitm-college-logo.png"
+      type="image/svg+xml"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/css/takeTest.css' %}"
+    />
+
+    <script src="{% static '/js/takeTest.js' %}"></script>
+
+    {% comment %}
+    <link rel="stylesheet" href="{% static '/css/takeTest.css' %}" />
+    {% endcomment %}
+  </head>
+  <body>
+    <div>
+      <h1 class="title">Test</h1>
+      <!-- <h1 class="title"></h1> -->
+      <form>
+        <!-- <div class="card">
+          <h2>Radio Buttons</h2>
+
+          <ul>
+            <li>
+              <input type="radio" name="name" id="one" checked />
+              <label for="one">Option #1</label>
+
+              <div class="check"></div>
+            </li>
+            <li>
+                <input type="radio" name="name" id="two"  />
+                <label for="two">Option #2</label>
+  
+                <div class="check"></div>
+              </li>
+              <li>
+                <input type="radio" name="name" id="three"  />
+                <label for="three">Option #3</label>
+  
+                <div class="check"></div>
+              </li>
+
+            <li>
+              <input type="radio" name="name" id="four" />
+              <label for="four">Option #4</label>
+
+              <div class="check"></div>
+            </li>
+            <li>
+              <input type="radio" name="name" id="five" />
+              <label for="five">Option #5</label>
+
+              <div class="check"></div>
+            </li>
+            <li>
+                <input type="radio" name="name" id="six" />
+                <label for="six">Option #6</label>
+  
+                <div class="check"></div>
+              </li>
+        </div> -->
+        <label class="showOverlay" for="check">Show mask </label>
+        <input id="check" class="check" type="checkbox" />
+        <div class="containerOuter">
+          <div class="container">
+            <input type="radio" class="hidden" id="input1" name="inputs" />
+            <label class="entry" for="input1"
+              ><div class="circle"></div>
+              <div class="entry-label">Kingdom</div></label
+            >
+            <input type="radio" class="hidden" id="input2" name="inputs" />
+            <label class="entry" for="input2"
+              ><div class="circle"></div>
+              <div class="entry-label">Horse</div></label
+            >
+            <input type="radio" class="hidden" id="input3" name="inputs" />
+            <label class="entry" for="input3"
+              ><div class="circle"></div>
+              <div class="entry-label">Computer</div></label
+            >
+            <div class="highlight"></div>
+            <div class="overlay"></div>
+          </div>
+        </div>
+        <svg width="0" height="0" viewBox="0 0 40 140">
+          <defs>
+            <mask id="holes">
+              <rect x="0" y="0" width="100" height="140" fill="white" />
+              <circle r="12" cx="20" cy="20" fill="black" />
+              <circle r="12" cx="20" cy="70" fill="black" />
+              <circle r="12" cx="20" cy="120" fill="black" />
+            </mask>
+          </defs>
+        </svg>
+
+        <button class="btn" onclick="">Next</button>
+      </form>
+    </div>
+  </body>
+</html>

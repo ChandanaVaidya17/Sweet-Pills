@@ -7,6 +7,11 @@ class user_id(models.Model):
     gender = models.CharField(max_length=6)
     dob = models.DateField()
     email = models.EmailField(max_length=250)
+    class Meta:
+        app_label="myapp"
+    
+    def __str__(self):
+        return self.user_name
 
 
 
