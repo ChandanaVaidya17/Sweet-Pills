@@ -167,13 +167,33 @@ submitBtn.addEventListener("click", () => {
   const answer = getSelected();
   answerArry.push(answer);
 
-  if((currentQuestion+1) == quizData.length)
+  if((currentQuestion+2) === quizData.length){
+    const subbtn = document.getElementById("submit");
+    subbtn.innerText = "Submit";
+  }
 
   if (answer) {
     currentQuestion++;
 
     if (currentQuestion < quizData.length) {
       loadQuiz();
+    }else if(currentQuestion === quizData.length){
+      $.ajax({
+        url: '/my-api-endpoint/',
+        method: 'POST',
+        data: {
+          'my_array': JSON.stringify()
+        },
+        success: function(response) {
+          console.log(response);
+          alert("Success!");
+          location.href("../pages/finsh.html")
+        },
+        error: function(xhr, status, error) {
+          console.log(error);
+          alert(error);
+        }
+      });
     }
     
   }
