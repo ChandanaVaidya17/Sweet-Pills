@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        {% load static %}
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/index.css' %}"
+    />
+    
+  </head>
+  <body>
+    {% csrf_token %}
+    <header>
+      <div class="logo">
+        <img class="logoImg" src="{% static 'images/logo.jpg' %}" alt="logoImg" />
+
+      </div>
+
+      <div class="header-div">
+        <div class="navigation">
+          <ul>
+            <li><a href="taketest">Take Test</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <button class="sign-in" onclick="location.href='signin'">
+            Sign In
+          </button>
+        </div>
+      </div>
+    </header>
+  
+  </body>
+      {% load static %}
+    <script src="{% static 'js/index.js' %}"></script>
+</html>
