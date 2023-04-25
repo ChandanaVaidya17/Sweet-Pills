@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        {% load static %}
+    {% load static %}
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,31 +11,45 @@
       type="text/css"
       href="{% static 'css/index.css' %}"
     />
-    
   </head>
   <body>
     {% csrf_token %}
     <header>
       <div class="logo">
-        <img class="logoImg" src="{% static 'images/logo.jpg' %}" alt="logoImg" />
-
+        <img
+          class="logoImg"
+          src="{% static 'images/logo.jpg' %}"
+          alt="logoImg"
+        />
       </div>
 
       <div class="header-div">
         <div class="navigation">
           <ul>
-            <li><a href="taketest">Take Test</a></li>
+            <li>{% if 'user' in request.session %}
+              <a href="taketest">Take Test</a>
+              {% else %}
+              <a href="signin">Take Test</a>
+                Sign In
+              </button>
+    
+              {% endif %}
+              </li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
           </ul>
+          {% if 'user' in request.session %}
+          <button>Welcome, {{ request.session.user }}!</button>
+          {% else %}
           <button class="sign-in" onclick="location.href='signin'">
             Sign In
           </button>
+
+          {% endif %}
         </div>
       </div>
     </header>
-  
   </body>
-      {% load static %}
-    <script src="{% static 'js/index.js' %}"></script>
+  {% load static %}
+  <script src="{% static 'js/index.js' %}"></script>
 </html>
