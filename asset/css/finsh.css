@@ -1,0 +1,59 @@
+body{
+	background-image: url("../images/patrick-ryan-3kUIaB2EPp8-unsplash.jpg");
+}
+.wrap{
+	margin: 20px auto;
+	width: 450px;	height: 450px;
+	text-align: center;
+	position: relative;
+	background-color: #eee;
+	border-radius: 15px;
+	padding: 30px;
+	opacity: 0.8;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 2px;
+}
+.wrap img{
+	border-radius: 50%;
+	clip: rect(0px,200px,190px,0px);	
+}
+.wrap h2{
+	margin-top: 30px;
+}
+.wrap h3{
+	text-align: center;
+	margin: 30px auto;
+	width: 365px;
+	opacity: 0.6;
+}
+.wrap button{
+	height: 45px;
+	width: 175px;
+	border-radius: 100px;
+	border: none;
+	font-size: 18px;
+	font-weight: 20px;
+	color: #eee;	
+	opacity: 1;
+}
+
+button:hover{
+	opacity: 0.9;
+	cursor: pointer;
+}
+.wrap .share{
+	margin-right: 20px;
+	background-color: #4983CD;
+}
+.wrap .share:hover{
+	transition: 0.3s;
+	box-shadow: 0px 10px 40px #B3CFF4;
+}
+.wrap .haveabeer{
+	transition: 0.3s;
+	background-color: #20CD1B;
+}
+.wrap .haveabeer:hover{
+	transition: 0.3s;
+	box-shadow: 0px 10px 40px #92E891;
+}
