@@ -5,14 +5,16 @@ from django.contrib import messages
 from .forms import CRUDFORM
 from django.contrib.auth.backends import BaseBackend
 from django.contrib.auth import get_user_model
-from myapp.backends import EmailBackend
+# from myapp.backends import EmailBackend
 from .authentication import EmailBackend
+
 import pdb
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import QuizResponse
 from .serializers import QuizResponseSerializer
+
 
 
 def HomePage(request):
@@ -31,6 +33,7 @@ def SignIn(request):
             return redirect('home')
         else:
             messages.error(request, 'Invalid credentials. Please try again.')
+            return render(request, 'signin.html')
     return render(request, 'signin.html')
 
 
