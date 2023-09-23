@@ -11,10 +11,19 @@ header {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
 
 .header-div {
     align-items: end;
+   
+
+}
+
+.things{
+    background: url(../images/jailam-rashad-Qe58SmRMcH4-unsplash.jpg);
+    width: 90vh;
+    height: 90vh;
 }
 
 .logo img {

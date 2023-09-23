@@ -30,7 +30,6 @@ class personal_details(models.Model):
     comments = models.CharField(max_length=1000) 
 
 
+class QuizResponse(models.Model):
+    answers = models.TextField()
 
-
-
-# Create your models here.
