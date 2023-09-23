@@ -5,9 +5,8 @@ from django.contrib import messages
 from .forms import CRUDFORM
 from django.contrib.auth.backends import BaseBackend
 from django.contrib.auth import get_user_model
-from myapp.backends import EmailBackend
+# from myapp.backends import EmailBackend
 from .authentication import EmailBackend
-import pdb
 
 def HomePage(request):
     return render(request, 'home.html')
@@ -25,6 +24,7 @@ def SignIn(request):
             return redirect('home')
         else:
             messages.error(request, 'Invalid credentials. Please try again.')
+            return render(request, 'signin.html')
     return render(request, 'signin.html')
 
 

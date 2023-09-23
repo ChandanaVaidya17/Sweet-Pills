@@ -14,6 +14,7 @@ body {
     height: 100vh;
     margin: -20px 0 50px;
 		margin-top: 20px;
+    overflow: hidden;
 }
 
 h1 {
