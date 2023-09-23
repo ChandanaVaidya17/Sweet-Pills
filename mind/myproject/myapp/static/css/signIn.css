@@ -98,6 +98,10 @@ button {
     transition: transform 80ms ease-in;
 }
 
+button:hover{
+    cursor:pointer;
+}
+
 button:active {
     transform: scale(.95);
 }
