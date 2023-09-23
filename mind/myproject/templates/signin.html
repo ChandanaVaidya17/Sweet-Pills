@@ -39,8 +39,13 @@
       {% endfor %}
       <div class="container" id="container">
         <div class="form-container sign-up-container">
+
+          <form action="" method="POST">
+    
+
           <form action="{% url 'signup' %}" method="POST">
             {% csrf_token %}
+
             <h1>Create Account</h1>
             <div class="social-container">
               <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -57,8 +62,12 @@
           </form>
         </div>
         <div class="form-container sign-in-container">
+
+          <form action="" method="POST">
+
           <form action="{% url 'signin' %}" method="POST">
             {% csrf_token %}
+
             <h1>Sign in</h1>
             <div class="social-container">
               <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>

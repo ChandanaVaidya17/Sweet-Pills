@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from myapp import views
 
 
@@ -27,8 +27,6 @@ urlpatterns = [
     path('signin/',views.SignIn,name='signin'),
     path('taketest/',views.TakeTest,name='taketest'),
     path('signup/',views.SignUp,name='signup'),
+    path('api/', include('myapp.urls')),
 ]
 
-
-
-# static files (images, css, javascript,

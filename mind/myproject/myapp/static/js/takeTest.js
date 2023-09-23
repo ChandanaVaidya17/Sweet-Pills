@@ -178,6 +178,7 @@ const quizData = [
       if (currentQuestion < quizData.length) {
         loadQuiz();
       }else if(currentQuestion === quizData.length){
+        console.log(answerArry)
         $.ajax({
           url: '/my-api-endpoint/',
           method: 'POST',
@@ -197,6 +198,7 @@ const quizData = [
       }
       
     }
+  
     
   });
   
