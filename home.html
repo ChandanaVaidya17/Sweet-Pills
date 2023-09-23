@@ -1,41 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        {% load static %}
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/index.css' %}"
-    />
+    {% comment %} <link rel="stylesheet" href="./asset/css/index.css" /> {% endcomment %}
+    {% load static %}
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'my_app/css/index.css' %}">
+
+    <script src="{% static 'my_app/js/index.js' %}"></script> {% endcomment %}
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-div {
+    align-items: end;
     
+}
+
+.logo img {
+    height: 50px;
+    /* align-items: start; */
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.navigation ul li {
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.navigation ul li:last-child {
+    margin-right: 0;
+}
+
+.navigation ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navigation button {
+    margin-left: 10px;
+    padding: 8px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+ul :hover {
+  color: red;
+}
+
+.navigation button:hover {
+    background-color: white;
+}
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background:  linear-gradient(178.6deg, rgb(20, 36, 50) 11.8%, rgb(124, 143, 161) 83.8%);
+}
+
+.content{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1{
+    font-size: 45px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.content p{
+    font-size: 16px;
+    color: #fff;
+}
+
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color:rgb(20, 36, 50);
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+  color:white;
+}
+
+
+
+/*  */
+
+.square {
+position: relative;
+margin: 0 10px;
+width: 400px; height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.square .one {
+position: absolute;
+width: 100%;
+height: 100%;
+border: 2px solid black;
+border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+transition: 0.5s;
+animation: animate 6s linear infinite;
+
+}
+
+.twitch:hover .one {
+border: none;
+background:rgb(20, 36, 50);;
+}
+
+.square .two {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 2px solid black;
+border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+transition: 0.5s;
+animation: animate 6s linear infinite;
+}
+
+.twitch:hover .two {
+border: none;
+background: rgb(20, 36, 50);;
+
+}
+
+
+
+
+.square .three {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 2px solid black;
+border-radius: 31% 45% 74% 35% / 38% 56% 51% 37%;
+transition: 0.5s;
+animation: animate2 10s linear infinite;
+}
+.twitch:hover .three {
+border: none;
+background:rgb(20, 36, 50);;
+}
+
+.circle {
+position: relative;
+padding: 40px 60px;
+text-align: center;
+transition: 0.5s;
+z-index: 1000;
+}
+
+.square:hover{
+color: white;
+}
+
+.content:hover {
+
+color: #ffffff;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+.DrugRadar{
+    font-size: 50px;
+}
+    </style>
   </head>
   <body>
     {% csrf_token %}
     <header>
       <div class="logo">
-        <img class="logoImg" src="{% static 'images/logo.jpg' %}" alt="logoImg" />
-
+       {% load static %} <img src="{% static "download.png" %}" alt="home" />
       </div>
 
       <div class="header-div">
         <div class="navigation">
           <ul>
-            <li><a href="taketest">Take Test</a></li>
+            <li><a href="{%url 'taketest'%}">Take Test</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
           </ul>
-          <button class="sign-in" onclick="location.href='signin'">
-            Sign In
+
+          <button
+            class="sign-in"
+            onclick="location.href='{%url 'signin'%}'"
+          >
+            Logout
           </button>
         </div>
       </div>
     </header>
-  
+    <main>
+    <div class="container">
+        <div class="content">
+            <div class="square twitch" style="margin-bottom: 50px;">
+                <span class="one" ></span>
+                <span class="two"></span>
+                <span class="three"></span>
+                <div class="circle">
+                    <h2 class="DrugRadar"> Sweet Pills
+               
+                    </h2>
+                    <p>Small steps can lead to big progress in mental health</p>
+                </div>
+            </div>
+
+            <a  class="button" target="_parent">
+                    <span class="actual-text">&nbsp;Psychological well-being&nbsp;</span>
+                    <span class="hover-text" aria-hidden="true">&nbsp;Psychological well-being&nbsp;</span>
+            </a>
+        </div>
+    </div>
+
   </body>
-      {% load static %}
-    <script src="{% static 'js/index.js' %}"></script>
 </html>
