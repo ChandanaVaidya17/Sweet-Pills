@@ -1,13 +1,5 @@
 from django import forms
 from .models import user_id
-# bullyingapp/forms.py
-from django import forms
-from .models import BullyingReport
-
-class BullyingReportForm(forms.ModelForm):
-    class Meta:
-        model = BullyingReport
-        fields = ['name', 'email', 'message']
 
 
 class CRUDFORM(forms.ModelForm):
