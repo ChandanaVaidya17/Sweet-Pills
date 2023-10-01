@@ -16,25 +16,17 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from myapp import views
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.HomePage, name='home'),
-    path('signin/', views.SignIn, name='signin'),
-    path('taketest/', views.TakeTest, name='taketest'),
-    path('signup/', views.SignUp, name='signup'),
-    path('focusMode/', views.foucsmode, name='focusMode'),
-    path('logout/', views.Logout, name='logout'),
-    path('Mentalhealth/', views.MentalHealth, name='Mentalhealth'),
-    # path('my-api-endpoint/', views.MyApi, name='my-api-endpoint'),
-    path('report_bullying/', views.report_bullying, name='report_bullying'),
-    path('thank_you/', views.thank_you, name='thank_you'),
-    path('my-api-endpoint/', views.QuizResponseView.as_view(),
-         name='my_api_endpoint'),
+    path('',views.HomePage,name='home'),
+    path('signin/',views.SignIn,name='signin'),
+    path('taketest/',views.TakeTest,name='taketest'),
+    path('signup/',views.SignUp,name='signup'),
+    path('api/', include('myapp.urls')),
 ]
 
-
-# static files (images, css, javascript,
