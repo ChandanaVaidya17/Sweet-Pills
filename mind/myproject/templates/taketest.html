@@ -1,12 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-{% load static %}
+    {% load static %}
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/takeTest.css' %}">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/takeTest.css' %}"
+    />
     <title>Quiz App</title>
   </head>
   <body>
@@ -21,10 +24,10 @@
       <button id="submit">Next</button>
     </div>
     <div>
-        <h2 class="answer"></h2>
+      <h2 class="answer"></h2>
     </div>
-
-</body>
-{% load static %}
-<script src="{% static 'js/takeTest.js' %}"></script>
+  </body>
+  {% load static %}
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="module" src="{% static 'js/takeTest.js' %}"></script>
 </html>
